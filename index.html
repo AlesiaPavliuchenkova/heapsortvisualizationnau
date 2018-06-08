@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>Heap Sort Algorithm Visualization</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="dist/vis.js"></script>
+</head>
+<body>
+    <div id="main">
+        <h1>Heapsort Algorithm Visualization<a href="https://en.wikipedia.org/wiki/Heapsort" target="_blank">(algorithm description)</a></h1>
+        <div id="info">
+            <table>
+                <tr>
+                    <td class="fixedWidth">How many elements do you want to sort (1-15)? <input id="elements-count" type="number" min="1" max="15" step="1"></td>
+                    <td><button id="continue" type="submit">CONTINUE</button></td>
+                </tr>
+                <tr>
+                    <td  class="fixedWidth"><p id="array-elements-count-hint"></p></td>
+                    <td><button id="generate-values" type="submit">GENERATE</button></td>
+                </tr>
+            </table>
+            <div id="step2">
+                <div id="array-elements"></div>
+                <table>
+                    <tr>
+                        <td>Select ordering:</td>
+                        <td><select id="order"> 
+                            <option value="ascending">ascending</option>
+                            <option value="descending">descending</option>
+                        </select></td>
+                    </tr>
+                <tr>
+                    <td>Select speed (ms)</td>
+                    <td><select id="speed"> 
+                            <option value="1000">1000</option>
+                            <option value="2000">2000</option>
+                            <option value="3000" selected>3000</option>
+                            <option value="4000">4000</option>
+                            <option value="5000">5000</option>
+                        </select>
+                    </td>
+                    <td><button id="play">PLAY</button></td>
+                    <td><button id="pause" disabled>PAUSE</button></td>
+                    <td><button id="stop" disabled>STOP</button></td>
+                </table>
+                <p id="array-elements-value-hint"></p>
+            </div>    
+        </div>
+        <div id="visualization">
+            <div id="visualization-text">
+                <p id="text1"></p>
+                <p id="text2" class="explanation"></p>
+                <p id="text3" class="explanation"></p>
+                <p id="text4" class="explanation"></p>
+                <p id="text5" class="explanation"></p>
+                <p id="text6" class="explanation"></p>
+                <p id="text7" class="explanation"></p>
+            </div>
+            <div id="mynetwork">
+                
+            </div>
+        </div>    
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
