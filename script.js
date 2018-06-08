@@ -131,6 +131,7 @@ async function sort(nodes, order){
     //start ordering and rebuilding heap after node deletion
     for(let j = n - 1; j > 0; j-- ) {
         text2.innerHTML = '';
+        await sleep(1000);
         text2.innerHTML = 'Heap building has been finished.';
         await sleep(timeMs * 2);
         await swap(0, j, true, null, nodes);
@@ -140,6 +141,7 @@ async function sort(nodes, order){
     }
     //hide last node
     await hideNode(0, nodes);
+    text1.innerHTML = '';
     text2.innerHTML = 'Algorithm visualization is comleted.'
 }
 
